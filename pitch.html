@@ -381,6 +381,11 @@
       .page { margin: 0; box-shadow: none; }
     }
 
+    .client-logo {
+      position: absolute; top: 18mm; right: 24mm; z-index: 2;
+      max-height: 50px; max-width: 120px; object-fit: contain;
+    }
+
     @media screen {
       body { background: #ddd; }
       .page { box-shadow: 0 2px 20px rgba(0,0,0,0.15); margin: 20px auto; }
@@ -391,6 +396,8 @@
 
   <!-- ==================== PAGE 1 ==================== -->
   <div class="page">
+
+    <img src="images/logo.svg" alt="Jipang logo" class="client-logo">
 
     <div class="top-label">A Note From a Local 15-Year-Old</div>
 
