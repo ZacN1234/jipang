@@ -8,6 +8,7 @@
 <meta name="description" content="Jipang is a family-run Japanese home-style kitchen on The Corso, Manly since 1993. Ramen, udon, curry, bento boxes and more. Open 7 days 11:30am-8pm. Call (02) 9977 4436.">
 <link rel="canonical" href="https://www.jipang-manly.com/">
 <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+<link rel="apple-touch-icon" href="images/logo.svg">
 <meta property="og:title" content="Jipang Manly | Japanese Home-Style Kitchen Since 1993">
 <meta property="og:description" content="Family-run Japanese home-style kitchen on The Corso, Manly. Ramen, udon, curry, bento boxes and more. Open 7 days 11:30am-8pm.">
 <meta property="og:image" content="https://www.jipang-manly.com/images/restaurant.jpg">
@@ -27,6 +28,7 @@
 <meta name="geo.placename" content="Manly">
 <meta name="geo.position" content="-33.7963;151.2846">
 <meta name="ICBM" content="-33.7963, 151.2846">
+<link rel="preload" as="image" href="images/restaurant.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -77,12 +79,12 @@
     "https://www.instagram.com/jipang.manly",
     "https://www.facebook.com/jipang.manly",
     "https://www.tripadvisor.com.au/Restaurant_Review-g255339-d2080057-Reviews-Jipang-Manly_Northern_Beaches_Greater_Sydney_New_South_Wales.html",
-    "https://maps.google.com/?cid=jipang+manly",
-    "https://www.ubereats.com/store/jipang",
-    "https://www.doordash.com/store/jipang",
+    "https://www.google.com/maps/place/Jipang/@-33.7963,151.2846,17z/",
+    "https://www.ubereats.com/au/store/jipang/cM1t0_iCTLKcgg3csf7V0Q",
+    "https://www.doordash.com/en-AU/store/jipang-japanese-manly-27478570/",
     "https://www.zomato.com/sydney/jipang-manly"
   ],
-  "acceptsReservations": "Yes, for groups of 5 or more",
+  "acceptsReservations": true,
   "paymentAccepted": "Cash, Visa, American Express, MasterCard",
   "currenciesAccepted": "AUD",
   "areaServed": {
@@ -104,7 +106,7 @@
     "ratingValue": "4.7",
     "bestRating": "5",
     "worstRating": "1",
-    "ratingCount": "1358"
+    "ratingCount": "1196"
   },
   "review": [
     {
@@ -117,14 +119,26 @@
     {
       "@type": "Review",
       "author": {"@type": "Person", "name": "TC1884"},
+      "datePublished": "2019",
       "reviewBody": "The food here is absolutely superb...just as good as any I visited in Tokyo.",
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
     },
     {
       "@type": "Review",
       "author": {"@type": "Person", "name": "Cathy W"},
+      "datePublished": "2021",
       "reviewBody": "Couldn't fault Jipang. Food was excellent. Service was friendly. Beer was cold. Great value for money.",
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+    }
+  ],
+  "potentialAction": [
+    {
+      "@type": "OrderAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.ubereats.com/au/store/jipang/cM1t0_iCTLKcgg3csf7V0Q",
+        "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+      }
     }
   ],
   "speakable": {
@@ -407,7 +421,7 @@
       "name": "What are the most popular dishes at Jipang?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Based on customer reviews, popular dishes at Jipang include the chicken katsu curry, gyoza, ramen (particularly the seafood and curry ramen), bento boxes, and takoyaki. The teriyaki dishes are also highly regarded."
+        "text": "Based on customer reviews, popular dishes at Jipang include the chicken katsu curry, gyoza, ramen (particularly the chashu and curry ramen), bento boxes, and takoyaki. The teriyaki dishes are also highly regarded."
       }
     },
     {
@@ -424,6 +438,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Jipang accepts Cash, Visa, American Express (Amex), and MasterCard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a meal cost at Jipang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most main dishes, ramen, udon, rice bowls and curry dishes at Jipang Manly are priced between $20 and $27. Starters range from $4 to $17. The bento box is $33. Jipang is known for excellent value for Japanese food in Manly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Jipang have gluten-free options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Jipang Manly does not have a dedicated gluten-free menu, but some dishes may be adaptable. Customers should inform staff of any allergies or dietary requirements when ordering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I order takeaway from Jipang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Jipang Manly offers takeaway. Customers can call (02) 9977 4436 to order for pickup, or order delivery through UberEats and DoorDash. Lunch specials are available for takeaway."
       }
     }
   ]
@@ -589,6 +627,27 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 1.05rem; color: var(--subtle); max-width: 600px; line-height: 1.7;
 }
 .section-alt { background: var(--card-bg); }
+
+/* SECTION CTA */
+.section-cta {
+  text-align: center; margin-top: 36px;
+}
+.section-cta a {
+  color: var(--accent); font-weight: 700; font-size: 1rem;
+  transition: color 0.2s;
+}
+.section-cta a:hover { color: #a3442e; }
+
+/* FIND US ON LINKS */
+.find-us-links {
+  display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;
+  margin-top: 28px;
+}
+.find-us-links a {
+  font-size: 0.9rem; font-weight: 700; color: var(--accent);
+  transition: color 0.2s;
+}
+.find-us-links a:hover { color: #a3442e; }
 
 /* ABOUT */
 .about-grid {
@@ -876,16 +935,103 @@ img { max-width: 100%; height: auto; display: block; }
   <a href="tel:0299774436" class="btn-primary" onclick="closeMobile()">Call (02) 9977 4436</a>
 </div>
 
+<main>
+
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg" role="img" aria-label="Jipang Manly Japanese food spread with bento box, curry and teriyaki dishes on warm wood table"></div>
   <div class="hero-content">
     <div class="hero-badge">Since 1993 &middot; The Corso, Manly</div>
-    <h1>Home-Style Japanese. Thirty Years of Love.</h1>
-    <p class="hero-sub">Handmade ramen, udon, curry and teriyaki from family recipes &mdash; cooked fresh with extra love every day on The Corso, Manly.</p>
+    <h1>Home-Style Japanese. Three Decades of Love.</h1>
+    <p class="hero-sub">Rich, slow-simmered broths. Golden katsu straight from the fryer. Handmade gyoza folded fresh every morning. Since 1993, the same family has been cooking Japanese home-style comfort on The Corso &mdash; and the only thing that's changed is how long the locals have loved it.</p>
     <div class="hero-btns">
       <a href="#menu" class="btn-primary">Explore the Menu</a>
       <a href="tel:0299774436" class="btn-outline">Call to Order</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <div style="text-align:center;">
+      <span class="section-label">1,350+ Reviews</span>
+      <h2 class="section-title">Don't Take Our Word For It</h2>
+      <p class="section-subtitle" style="margin: 0 auto 20px;">One of the highest-rated Japanese restaurants on Sydney's Northern Beaches. Here's what Manly locals and visitors have said.</p>
+    </div>
+
+    <div class="reviews-ratings">
+      <div class="rating-badge">
+        <div class="rating-score">4.7</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-source">Google</div>
+        <div class="rating-count">1,196 reviews</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-score">4.9</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-source">Facebook</div>
+        <div class="rating-count">28 reviews</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-score">4.2</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <div class="rating-source">Zomato</div>
+        <div class="rating-count">69 reviews</div>
+      </div>
+      <div class="rating-badge">
+        <div class="rating-score">4.1</div>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <div class="rating-source">TripAdvisor</div>
+        <div class="rating-count">65 reviews</div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <blockquote>The staff is extremely friendly, the prices are great, and everything is delicious &mdash; it's my favorite spot for dining with locals, entertaining visitors, and hosting working lunches!</blockquote>
+        <div class="review-author">Bek <span class="review-source">&middot; Google, 2024</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>There is a reason Jipang is so loved by locals &mdash; it's great food! Whether lunch or dinner you know you are going to get a great, authentic Japanese feed.</blockquote>
+        <div class="review-author">Google Reviewer <span class="review-source">&middot; Google</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>The food here is absolutely superb...just as good as any I visited in Tokyo.</blockquote>
+        <div class="review-author">TC1884 <span class="review-source">&middot; TripAdvisor</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>Everything we ordered, from the gyoza to the ramen and the bento box were so delicious. Excellent quality plus really lovely people.</blockquote>
+        <div class="review-author">Liza P <span class="review-source">&middot; TripAdvisor</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>Lovely eatery with authentic Japanese dishes. We've been here many times and each time we visit we are greeted with friendly smiles. Menu is a variety of heartwarming dishes.</blockquote>
+        <div class="review-author">Google Reviewer <span class="review-source">&middot; Google</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>Couldn't fault Jipang. Food was excellent. Service was friendly. Beer was cold. Great value for money.</blockquote>
+        <div class="review-author">Cathy W <span class="review-source">&middot; TripAdvisor</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>If I am in the neighbourhood around lunch time it's a sure bet you'll find me sitting at one of Jipang's tables with a ramen in front of me.</blockquote>
+        <div class="review-author">WizardofOzDK <span class="review-source">&middot; TripAdvisor</span></div>
+      </div>
+      <div class="review-card">
+        <blockquote>This place is cozy with a great customer service. The staff is super nice and the food is really good and substantial.</blockquote>
+        <div class="review-author">Valeria R <span class="review-source">&middot; TripAdvisor</span></div>
+      </div>
+    </div>
+
+    <div class="find-us-links">
+      <span style="font-size: 0.9rem; font-weight: 700; color: var(--text);">Find us on:</span>
+      <a href="https://www.google.com/maps/place/Jipang/@-33.7963,151.2846,17z/" target="_blank" rel="noopener noreferrer">Google</a>
+      <a href="https://www.tripadvisor.com.au/Restaurant_Review-g255339-d2080057-Reviews-Jipang-Manly_Northern_Beaches_Greater_Sydney_New_South_Wales.html" target="_blank" rel="noopener noreferrer">TripAdvisor</a>
+      <a href="https://www.zomato.com/sydney/jipang-manly" target="_blank" rel="noopener noreferrer">Zomato</a>
+      <a href="https://www.facebook.com/jipang.manly" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
+
+    <div class="section-cta">
+      <a href="#contact">Come try it yourself &mdash; see hours &amp; location</a>
     </div>
   </div>
 </section>
@@ -894,13 +1040,13 @@ img { max-width: 100%; height: auto; display: block; }
 <section class="section" id="about">
   <div class="container">
     <span class="section-label">Our Story</span>
-    <h2 class="section-title">A Family Kitchen on The Corso</h2>
+    <h2 class="section-title">Started With a Dream and a Pot of Broth</h2>
     <p class="section-subtitle">Jipang is a family-run Japanese home-style kitchen that has been serving the Manly community from The Corso since 1993 &mdash; over 30 years of cooking with love.</p>
     <div class="about-grid">
       <div>
         <p class="about-quote">"Nothing can beat mum's cooking but our home-style kitchen is pretty close to it because we cook every meal with extra love."</p>
-        <p class="about-text">For more than three decades, the Jipang Family has been welcoming locals, visitors and families into our little corner of The Corso. Every dish &mdash; from our ramen and udon to our teriyaki and curry &mdash; is made fresh to order using the same recipes we started with back in 1993.</p>
-        <p class="about-text">We are a tight-knit family operation, and you will see that warmth the moment you walk through the door. Whether you are a regular grabbing your usual lunch order or visiting Manly for the first time, we treat every guest like family.</p>
+        <p class="about-text">In 1993, the Jipang family opened a tiny kitchen on The Corso with a handful of tables and a dream of sharing real Japanese home cooking with the Manly community. Three decades later, the recipes haven't changed &mdash; because when something works, you don't fix it.</p>
+        <p class="about-text">You'll notice it the moment you sit down. The regulars who wave to the kitchen. The staff who remember your order. The smell of sesame oil and dashi that hits you at the door. This isn't a chain restaurant &mdash; it's someone's family feeding yours, one bowl at a time. Jipang is proud to be part of Manly's dining scene on Sydney's Northern Beaches.</p>
         <div class="about-badges">
           <span class="about-badge">Homemade Fresh Daily</span>
           <span class="about-badge">Since 1993</span>
@@ -913,6 +1059,9 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/trip-food1.jpg" alt="Jipang Manly counter bar seating with wooden stools and kitchen staff" loading="lazy" width="400" height="260">
       </div>
     </div>
+    <div class="section-cta">
+      <a href="#menu">See What's Cooking &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -920,20 +1069,20 @@ img { max-width: 100%; height: auto; display: block; }
 <section class="section section-alt" id="menu">
   <div class="container">
     <span class="section-label">Our Menu</span>
-    <h2 class="section-title">Japanese Home-Style Dishes</h2>
+    <h2 class="section-title">What's Cooking</h2>
     <p class="section-subtitle">Jipang serves a full menu of Japanese home-style dishes including ramen, udon, curry, rice bowls, bento boxes, teriyaki and more, available for eat-in, takeaway and delivery in Manly.</p>
 
     <div class="menu-specials">
       <div class="menu-special-card">
         <h4>Lunch Specials</h4>
-        <p>Mon&ndash;Fri <time>11:30</time>&ndash;<time>14:30</time> &middot; Eat-in &amp; takeaway</p>
+        <p>Mon&ndash;Fri <time datetime="11:30">11:30</time>&ndash;<time datetime="14:30">14:30</time> &middot; Eat-in &amp; takeaway</p>
       </div>
       <div class="menu-special-card">
         <h4>Student Specials</h4>
         <p>Mon&ndash;Tue all day &middot; Eat-in only</p>
       </div>
       <div class="menu-special-card">
-        <h4>Not Available</h4>
+        <h4>Please Note</h4>
         <p>Specials not available on public holidays</p>
       </div>
     </div>
@@ -961,7 +1110,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/trip-takoyaki.jpg" alt="Jipang Manly takoyaki with bonito flakes close-up" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Starters</h3>
-          <p class="menu-category-desc">Light bites and appetisers to start your meal</p>
+          <p class="menu-category-desc">Crispy, golden, and gone in seconds. Our gyoza, takoyaki and tempura are made to share &mdash; if you can.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1022,7 +1171,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/restaurant.jpg" alt="Jipang Manly main plate dishes spread on table" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Main Plates</h3>
-          <p class="menu-category-desc">All served with side salad. Homemade teriyaki sauce uses raw sugar.</p>
+          <p class="menu-category-desc">Big, generous plates served with salad and our house teriyaki sauce, made with raw sugar for that slow, caramelised sweetness.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1071,7 +1220,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/restaurant.jpg" alt="Jipang Manly bento box with multiple dishes" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Bento Box</h3>
-          <p class="menu-category-desc">The ultimate Jipang experience</p>
+          <p class="menu-category-desc">Two mains, gyoza, salad, rice and miso &mdash; all in one box. This is how we do a proper Japanese lunch.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1087,7 +1236,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Salads</h3>
-          <p class="menu-category-desc">Garden fresh salads with Jipang original dressing</p>
+          <p class="menu-category-desc">Tossed fresh and finished with our house-made Jipang dressing.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1115,7 +1264,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Kids Menu</h3>
-          <p class="menu-category-desc">For children under 12 only</p>
+          <p class="menu-category-desc">Little bowls for little people. Mild, nourishing and sized for kids under 12.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1136,7 +1285,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/trip-food2.jpg" alt="Jipang Manly stir-fried noodles on sizzling plate" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Fried Rice / Cha-Han</h3>
-          <p class="menu-category-desc">All fried rice dishes include miso soup</p>
+          <p class="menu-category-desc">Wok-tossed rice with that smoky, sesame edge. Every serve comes with a bowl of our house miso soup.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1157,7 +1306,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/trip-curry-ramen.jpg" alt="Jipang Manly curry ramen in dark red bowl" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Ramen</h3>
-          <p class="menu-category-desc">Japanese wheat egg noodle with chicken, veges and fish soup stock. Sesame oil used in soup base.</p>
+          <p class="menu-category-desc">Our broth is simmered low and slow with chicken, vegetables and fish stock, finished with sesame oil. Rich, warming, deeply savoury.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1189,7 +1338,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Udon</h3>
-          <p class="menu-category-desc">Japanese wheat noodles with kelp dashi and soy sauce based soup</p>
+          <p class="menu-category-desc">Thick, chewy wheat noodles swimming in our kelp dashi and soy broth. Japanese comfort food at its purest.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1230,7 +1379,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/starters.jpg" alt="Jipang Manly Japanese rice bowl dishes" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Rice Bowls / Don</h3>
-          <p class="menu-category-desc">Japanese rice bowls, hearty and satisfying</p>
+          <p class="menu-category-desc">A mountain of steaming rice topped with your favourite protein. Simple, filling, and exactly what you came for.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1283,7 +1432,7 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/trip-katsu-curry.jpg" alt="Jipang Manly chicken katsu curry with rich golden curry sauce" loading="lazy" class="menu-category-img" width="100" height="100">
         <div>
           <h3 class="menu-category-title">Curry</h3>
-          <p class="menu-category-desc">Japanese style curry cooked with carrot, onion, potato and stock of chicken and pork</p>
+          <p class="menu-category-desc">Our Japanese curry is slow-cooked with carrot, onion, potato, and a chicken and pork stock that thickens into something deeply satisfying.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1315,7 +1464,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Beers</h3>
-          <p class="menu-category-desc">Japanese beers and chu-hi. Fully licensed, BYO wine only.</p>
+          <p class="menu-category-desc">Ice-cold Japanese beers and a refreshing lemon chu-hi. We're fully licensed and BYO wine.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1343,7 +1492,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Sake</h3>
-          <p class="menu-category-desc">Japanese rice wine selection</p>
+          <p class="menu-category-desc">From smooth junmai to sweet yuzu and plum &mdash; a curated pour to pair with your meal.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1375,7 +1524,7 @@ img { max-width: 100%; height: auto; display: block; }
       <div class="menu-category-header">
         <div>
           <h3 class="menu-category-title">Soft Drinks &amp; Tea</h3>
-          <p class="menu-category-desc">Cold drinks and Japanese beverages</p>
+          <p class="menu-category-desc">Japanese favourites like Ramune and Calpis alongside the classics. All ice-cold.</p>
         </div>
       </div>
       <div class="menu-items">
@@ -1448,90 +1597,17 @@ img { max-width: 100%; height: auto; display: block; }
 
     <div class="menu-delivery-box">
       <h4>Delivery &amp; Takeaway</h4>
-      <p>Order delivery through <strong>UberEats</strong> and <strong>DoorDash</strong>, or call us on <a href="tel:0299774436">(02) 9977 4436</a> for takeaway pickup.</p>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="section" id="reviews">
-  <div class="container">
-    <div style="text-align:center;">
-      <span class="section-label">What People Say</span>
-      <h2 class="section-title">Loved by Manly Locals &amp; Visitors</h2>
-      <p class="section-subtitle" style="margin: 0 auto 20px;">With over 1,350 reviews across Google, Facebook, TripAdvisor and Zomato, Jipang is one of the highest-rated Japanese restaurants on the Northern Beaches of Sydney.</p>
-    </div>
-
-    <div class="reviews-ratings">
-      <div class="rating-badge">
-        <div class="rating-score">4.7</div>
-        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="rating-source">Google</div>
-        <div class="rating-count">1,196 reviews</div>
-      </div>
-      <div class="rating-badge">
-        <div class="rating-score">4.9</div>
-        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="rating-source">Facebook</div>
-        <div class="rating-count">28 reviews</div>
-      </div>
-      <div class="rating-badge">
-        <div class="rating-score">4.2</div>
-        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <div class="rating-source">Zomato</div>
-        <div class="rating-count">69 reviews</div>
-      </div>
-      <div class="rating-badge">
-        <div class="rating-score">4.1</div>
-        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <div class="rating-source">TripAdvisor</div>
-        <div class="rating-count">65 reviews</div>
-      </div>
-    </div>
-
-    <div class="reviews-grid">
-      <div class="review-card">
-        <blockquote>The staff is extremely friendly, the prices are great, and everything is delicious &mdash; it's my favorite spot for dining with locals, entertaining visitors, and hosting working lunches!</blockquote>
-        <div class="review-author">Bek <span class="review-source">&middot; Google, 2024</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>My favorite restaurant! They have the best dumplings and incredible seafood ramen noodles.</blockquote>
-        <div class="review-author">Cheryl <span class="review-source">&middot; Google, 2024</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>The food here is absolutely superb...just as good as any I visited in Tokyo.</blockquote>
-        <div class="review-author">TC1884 <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>Everything we ordered, from the gyoza to the ramen and the bento box were so delicious. Excellent quality plus really lovely people.</blockquote>
-        <div class="review-author">Liza P <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>The best chicken katsu curry I've ever tasted! The curry was thick and flavorful and the chicken katsu was perfectly fried.</blockquote>
-        <div class="review-author">J F <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>Couldn't fault Jipang. Food was excellent. Service was friendly. Beer was cold. Great value for money.</blockquote>
-        <div class="review-author">Cathy W <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>If I am in the neighbourhood around lunch time it's a sure bet you'll find me sitting at one of Jipang's tables with a ramen in front of me.</blockquote>
-        <div class="review-author">WizardofOzDK <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
-      <div class="review-card">
-        <blockquote>This place is cozy with a great customer service. The staff is super nice and the food is really good and substantial.</blockquote>
-        <div class="review-author">Valeria R <span class="review-source">&middot; TripAdvisor</span></div>
-      </div>
+      <p>Order delivery through <a href="https://www.ubereats.com/au/store/jipang/cM1t0_iCTLKcgg3csf7V0Q" target="_blank" rel="noopener noreferrer"><strong>UberEats</strong></a> and <a href="https://www.doordash.com/en-AU/store/jipang-japanese-manly-27478570/" target="_blank" rel="noopener noreferrer"><strong>DoorDash</strong></a>, or call us on <a href="tel:0299774436">(02) 9977 4436</a> for takeaway pickup.</p>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section class="section section-alt" id="gallery">
+<section class="section" id="gallery">
   <div class="container">
     <div style="text-align:center;">
-      <span class="section-label">Gallery</span>
-      <h2 class="section-title">A Taste of Jipang</h2>
+      <span class="section-label">Inside the Kitchen</span>
+      <h2 class="section-title">Straight From Our Kitchen</h2>
       <p class="section-subtitle" style="margin: 0 auto;">Fresh from our kitchen to your table &mdash; a look at the dishes and atmosphere at Jipang Manly.</p>
     </div>
     <div class="gallery-grid">
@@ -1560,15 +1636,18 @@ img { max-width: 100%; height: auto; display: block; }
         <img src="images/starters.jpg" alt="Jipang Manly starter dishes selection" loading="lazy" width="400" height="400">
       </div>
     </div>
+    <div class="section-cta">
+      <a href="#menu">Hungry yet? Browse the menu &rarr;</a>
+    </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section section-alt" id="faq">
   <div class="container">
     <div style="text-align:center;">
       <span class="section-label">Questions &amp; Answers</span>
-      <h2 class="section-title">Frequently Asked Questions</h2>
+      <h2 class="section-title">Frequently Asked Questions About Jipang Manly</h2>
       <p class="section-subtitle" style="margin: 0 auto;">Everything you need to know about visiting Jipang on The Corso, Manly.</p>
     </div>
     <div class="faq-list">
@@ -1578,7 +1657,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
       <div class="faq-item">
         <button class="faq-question">What are your opening hours?</button>
-        <div class="faq-answer"><p>We are open 7 days a week from <time>11:30</time>am to <time>20:00</time> (8:00pm). Come in any day for lunch or dinner!</p></div>
+        <div class="faq-answer"><p>We are open 7 days a week from <time datetime="11:30">11:30am</time> to <time datetime="20:00">8:00pm</time>. Come in any day for lunch or dinner!</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Is there parking near Jipang?</button>
@@ -1628,15 +1707,27 @@ img { max-width: 100%; height: auto; display: block; }
         <button class="faq-question">What payment methods do you accept?</button>
         <div class="faq-answer"><p>We accept Cash, Visa, American Express (Amex) and MasterCard.</p></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question">How much does a meal cost at Jipang?</button>
+        <div class="faq-answer"><p>Most of our mains, ramen, udon, rice bowls and curries are between $20 and $27. Starters range from $4 to $17, and our bento box is $33. We're known for being great value for Japanese food in Manly.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Does Jipang have gluten-free options?</button>
+        <div class="faq-answer"><p>We don't have a specific gluten-free menu, but some of our dishes can be adapted. Please let our staff know about any allergies or dietary requirements when you order and we'll do our best to help.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I order takeaway from Jipang?</button>
+        <div class="faq-answer"><p>Absolutely! You can order takeaway by calling us on (02) 9977 4436, or order delivery through UberEats and DoorDash. Our lunch specials are available for takeaway too.</p></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section section-alt" id="contact">
+<section class="section" id="contact">
   <div class="container">
-    <span class="section-label">Visit Us</span>
-    <h2 class="section-title">Find Jipang on The Corso</h2>
+    <span class="section-label">Come Hungry</span>
+    <h2 class="section-title">Come See Us</h2>
     <p class="section-subtitle">Jipang is a Japanese home-style restaurant located at Shop 9, 37-39 The Corso in Manly, NSW &mdash; the heart of Sydney's Northern Beaches. We are open 7 days a week for lunch and dinner.</p>
 
     <div class="contact-grid">
@@ -1685,7 +1776,7 @@ img { max-width: 100%; height: auto; display: block; }
           <span class="contact-detail-chip">Wheelchair Accessible</span>
         </div>
 
-        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--subtle); line-height: 1.7;">Located on The Corso in the heart of Manly, just steps from Manly Beach and Manly Wharf. Whether you are arriving by ferry from Circular Quay or exploring the Northern Beaches, you will find us in Manly's vibrant pedestrian precinct.</p>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: var(--subtle); line-height: 1.7;">Located on The Corso in the heart of Manly, one of Sydney's most loved dining destinations, just steps from Manly Beach and Manly Wharf. Whether you are arriving by ferry from Circular Quay or exploring Sydney's Northern Beaches, you will find us in Manly's vibrant pedestrian precinct.</p>
       </div>
 
       <div class="contact-map">
@@ -1695,13 +1786,15 @@ img { max-width: 100%; height: auto; display: block; }
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <h4>Jipang</h4>
-        <p>Japanese home-style kitchen on The Corso since 1993. Every meal cooked with extra love.</p>
+        <p>Same family. Same recipes. Since '93.</p>
         <p style="margin-top: 12px;">
           <address style="font-style: normal;">
             Shop 9, 37-39 The Corso, Manly NSW 2095<br>
@@ -1731,7 +1824,7 @@ img { max-width: 100%; height: auto; display: block; }
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Jipang. All rights reserved.</p>
-      <p>Open 7 days, <time>11:30</time>am&ndash;<time>20:00</time>pm &middot; The Corso, Manly NSW 2095</p>
+      <p>Open 7 days, <time datetime="11:30">11:30am</time>&ndash;<time datetime="20:00">8:00pm</time> &middot; The Corso, Manly NSW 2095</p>
     </div>
   </div>
 </footer>
