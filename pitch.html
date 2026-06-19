@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A note for Jipang — from Zac</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #2a2a2a;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      padding: 20mm 24mm 16mm;
+      position: relative;
+      overflow: hidden;
+      background: #fffcf7;
+    }
+
+    /* Decorative corner blob */
+    .page::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 140px;
+      height: 140px;
+      background: #C2553A;
+      opacity: 0.12;
+      border-radius: 50%;
+    }
+
+    .page::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: -40px;
+      width: 160px;
+      height: 160px;
+      background: #C2553A;
+      opacity: 0.08;
+      border-radius: 50%;
+    }
+
+    /* LABEL */
+    .top-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C2553A;
+      margin-bottom: 10px;
+    }
+
+    /* HEADLINE */
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: #1a1a1a;
+      line-height: 1.1;
+      margin-bottom: 22px;
+    }
+
+    /* BODY TEXT */
+    .body-text {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #3a3a3a;
+      margin-bottom: 12px;
+      max-width: 95%;
+    }
+
+    .body-text strong {
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: #e0d5c3;
+      margin: 14px 0;
+    }
+
+    /* QR SECTION */
+    .qr-section {
+      background: #f5f0e8;
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .qr-section-text {
+      flex: 1;
+    }
+
+    .qr-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #C2553A;
+      margin-bottom: 6px;
+    }
+
+    .qr-headline {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+    }
+
+    .qr-url {
+      font-size: 14px;
+      font-weight: 600;
+      color: #C2553A;
+      text-decoration: underline;
+      text-decoration-color: #C2553A;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .qr-hint {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .qr-code {
+      flex-shrink: 0;
+    }
+
+    .qr-code img {
+      width: 140px;
+      height: 140px;
+      border-radius: 6px;
+    }
+
+    /* OFFER SECTION */
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .offer-text {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #3a3a3a;
+      margin-bottom: 10px;
+    }
+
+    /* PRICING BOX */
+    .pricing-box {
+      background: #f5f0e8;
+      border-radius: 12px;
+      padding: 14px 20px;
+      margin-bottom: 12px;
+    }
+
+    .pricing-amount {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .pricing-amount span {
+      font-size: 16px;
+      font-weight: 400;
+      color: #888;
+    }
+
+    .pricing-detail {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* CLOSING TEXT */
+    .closing {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #3a3a3a;
+      margin-bottom: 10px;
+    }
+
+    /* SIGN OFF */
+    .signoff-cheers {
+      font-size: 13.5px;
+      color: #3a3a3a;
+      margin-bottom: 0;
+    }
+
+    .signoff {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic;
+      color: #C2553A;
+      margin-bottom: 4px;
+    }
+
+    .signoff-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+    }
+
+    .signoff-info {
+      flex: 1;
+    }
+
+    .signoff-detail {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .signoff-qr {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .signoff-qr img {
+      width: 120px;
+      height: 120px;
+      border-radius: 4px;
+    }
+
+    .signoff-qr p {
+      font-size: 8px;
+      color: #aaa;
+      margin-top: 3px;
+    }
+
+    /* FOOTER LINE */
+    .footer-line {
+      position: absolute;
+      bottom: 16mm;
+      left: 24mm;
+      right: 24mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid #e0d5c3;
+    }
+
+    .footer-line p {
+      font-size: 9px;
+      color: #aaa;
+    }
+
+    /* ========== PAGE 2 ========== */
+
+    .page-2 {
+      page-break-before: always;
+    }
+
+    .page-2 h1 {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 11.5px;
+    }
+
+    .comparison-table thead th {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border-bottom: 2px solid #e0d5c3;
+      text-align: left;
+    }
+
+    .comparison-table thead th:first-child {
+      color: #1a1a1a;
+      width: 22%;
+    }
+
+    .comparison-table thead th:nth-child(2) {
+      color: #d44;
+      width: 39%;
+    }
+
+    .comparison-table thead th:nth-child(3) {
+      color: #2a7;
+      width: 39%;
+    }
+
+    .comparison-table tbody td {
+      padding: 7px 10px;
+      border-bottom: 1px solid #f0ebe3;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    .comparison-table tbody td:first-child {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .comparison-table tbody td:nth-child(2) {
+      color: #b44;
+    }
+
+    .comparison-table tbody td:nth-child(3) {
+      color: #1a7a50;
+    }
+
+    .comparison-table tbody tr:nth-child(even) {
+      background: #faf6ef;
+    }
+
+    /* WHAT'S INCLUDED */
+    .included-section {
+      margin-top: 18px;
+      margin-bottom: 14px;
+    }
+
+    .included-section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+    }
+
+    .included-item {
+      font-size: 13px;
+      color: #3a3a3a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .included-item .check {
+      color: #2a7;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+
+    @media screen {
+      body { background: #ddd; }
+      .page { box-shadow: 0 2px 20px rgba(0,0,0,0.15); margin: 20px auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="page">
+
+    <div class="top-label">A Note From a Local 15-Year-Old</div>
+
+    <h1>Hi, I'm Zac</h1>
+
+    <p class="body-text">
+      I'm a 15-year-old from right here in Manly and I run a small web design business. I build websites for local businesses around the Northern Beaches — mostly restaurants and cafes.
+    </p>
+
+    <p class="body-text">
+      Jipang has been part of my life growing up in Manly — <strong>over 30 years on The Corso</strong> is incredible, and your <strong>4.7 stars on Google with over 1,100 reviews</strong> says everything. But I've always felt your website doesn't show off the business the way it deserves. The menu is just a plain list, there's no story about the family behind it, and Google can't really find you the way it should.
+    </p>
+
+    <p class="body-text">
+      So I went ahead and <strong>rebuilt your website from scratch — completely free</strong>. It's fast, beautiful, and built to help more people discover Jipang online.
+    </p>
+
+    <div class="divider"></div>
+
+    <!-- QR SECTION -->
+    <div class="qr-section">
+      <div class="qr-section-text">
+        <div class="qr-label">Scan to See Your New Website</div>
+        <div class="qr-headline">Your new website, ready to view</div>
+        <span class="qr-url">jipang-cdf.pages.dev</span>
+        <div class="qr-hint">Point your phone camera at the code to open it instantly.</div>
+      </div>
+      <div class="qr-code">
+        <img src="images/jipang-qr.png" alt="QR code to view the new Jipang website">
+      </div>
+    </div>
+
+    <!-- PRICING BOX -->
+    <div class="pricing-box">
+      <div class="pricing-amount">$30<span>/month</span></div>
+      <p class="pricing-detail">
+        No setup fee. No lock-in contract. Cancel anytime.<br>
+        Includes hosting, updates, and ongoing support.
+      </p>
+    </div>
+
+    <p class="closing">
+      If it's not for you, that's completely fine — no hard feelings at all. I just thought you deserved a website that matches how good your food actually is.
+    </p>
+
+    <!-- SIGN OFF -->
+    <p class="signoff-cheers">Cheers,</p>
+    <div class="signoff">Zac</div>
+
+    <div class="signoff-block">
+      <div class="signoff-info">
+        <p class="signoff-detail">
+          Phone: 0401 102 066<br>
+          Email: zacmanzacmanoz@gmail.com
+        </p>
+      </div>
+      <div class="signoff-qr">
+        <img src="images/zac-website-qr.png" alt="QR code to Zac's web design website">
+        <p>zac-web-design.pages.dev</p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-line">
+      <p>Designed for Jipang — Manly's home-style Japanese kitchen since 1993.</p>
+    </div>
+
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="page page-2">
+
+    <div class="top-label">What We Improved</div>
+
+    <h1>What Your New Website Does Better</h1>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Before (old site)</th>
+          <th>After (new site)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Website Design</td>
+          <td>Basic ordering platform, no visual design</td>
+          <td>Custom-built, warm Japanese-inspired design with real photos</td>
+        </tr>
+        <tr>
+          <td>Google Search Data</td>
+          <td>No structured data at all</td>
+          <td>Full JSON-LD schema — Restaurant, Menu with 80+ items, FAQ, BreadcrumbList</td>
+        </tr>
+        <tr>
+          <td>AI Search (ChatGPT, etc.)</td>
+          <td>Invisible to AI search engines</td>
+          <td>Optimised with definitional sentences, FAQ schema, speakable markup</td>
+        </tr>
+        <tr>
+          <td>Menu Presentation</td>
+          <td>Plain text list, no descriptions</td>
+          <td>Full menu with descriptions, categories, images, and all prices</td>
+        </tr>
+        <tr>
+          <td>Customer Reviews</td>
+          <td>None shown on site</td>
+          <td>8 real reviews displayed with ratings from Google, TripAdvisor, Zomato, Facebook</td>
+        </tr>
+        <tr>
+          <td>Your Story</td>
+          <td>No about section at all</td>
+          <td>Full story section with the family history, chalkboard quote, and real photos</td>
+        </tr>
+        <tr>
+          <td>Mobile Experience</td>
+          <td>Functional but basic</td>
+          <td>Fully optimised with touch navigation, responsive images, fast loading</td>
+        </tr>
+        <tr>
+          <td>Contact &amp; Hours</td>
+          <td>Minimal contact info</td>
+          <td>Clear hours, address, clickable phone, Google Maps directions, social links</td>
+        </tr>
+        <tr>
+          <td>Local SEO</td>
+          <td>No location keywords</td>
+          <td>30+ natural mentions of Manly, The Corso, Northern Beaches, Sydney</td>
+        </tr>
+        <tr>
+          <td>Lunch &amp; Student Specials</td>
+          <td>Mentioned but not highlighted</td>
+          <td>Prominent special offer cards with times and conditions</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- WHAT'S INCLUDED -->
+    <div class="included-section">
+      <h2>What's Included</h2>
+      <div class="included-grid">
+        <div class="included-item"><span class="check">&#10003;</span> Custom-built website</div>
+        <div class="included-item"><span class="check">&#10003;</span> Cloudflare hosting (fast &amp; secure)</div>
+        <div class="included-item"><span class="check">&#10003;</span> Google search optimisation</div>
+        <div class="included-item"><span class="check">&#10003;</span> AI search optimisation</div>
+        <div class="included-item"><span class="check">&#10003;</span> Mobile responsive design</div>
+        <div class="included-item"><span class="check">&#10003;</span> Ongoing updates &amp; support</div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-line">
+      <p>Designed for Jipang — Manly's home-style Japanese kitchen since 1993.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

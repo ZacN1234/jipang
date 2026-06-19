@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Update Your Nameservers — jipang-manly.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A4;
+    margin: 15mm 18mm;
+  }
+  @media print {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    body { margin: 0; padding: 0; }
+    .page { box-shadow: none; padding: 0; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f4f4;
+    color: #1a1a1a;
+    line-height: 1.55;
+    font-size: 13.5px;
+  }
+  .page {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 40px 44px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  }
+  .top-line {
+    text-align: center;
+    font-size: 11.5px;
+    color: #888;
+    margin-bottom: 24px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 14.5px;
+    color: #666;
+    margin-bottom: 26px;
+  }
+  .intro {
+    font-size: 13.5px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .email-box {
+    background: #EFF6FB;
+    border-left: 4px solid #A8C8E0;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    border-radius: 4px;
+  }
+  .email-box strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13.5px;
+    color: #1a1a1a;
+  }
+  .email-box p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.55;
+  }
+  .ns-boxes {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .ns-box {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 6px;
+  }
+  .ns-box h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .ns-box ul {
+    list-style: none;
+    font-size: 12.5px;
+    font-family: 'Inter', monospace;
+  }
+  .ns-box ul li {
+    padding: 2px 0;
+  }
+  .ns-old {
+    background: #FDF0EE;
+    border: 1px solid #F0C4BC;
+  }
+  .ns-old h3 { color: #A33A2A; }
+  .ns-old li {
+    text-decoration: line-through;
+    color: #999;
+  }
+  .ns-new {
+    background: #EEFBF0;
+    border: 1px solid #B6E2BF;
+  }
+  .ns-new h3 { color: #2A7A3A; }
+  .ns-new li { color: #1a1a1a; }
+  .steps-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 13px;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #C2553A;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 14px;
+    margin-top: 1px;
+  }
+  .step-text {
+    font-size: 13.5px;
+    color: #333;
+    line-height: 1.5;
+    padding-top: 3px;
+  }
+  .step-text strong {
+    color: #1a1a1a;
+  }
+  .step-text ul {
+    margin-top: 4px;
+    margin-left: 16px;
+    list-style: disc;
+  }
+  .step-text ul li {
+    font-family: 'Inter', monospace;
+    font-size: 12.5px;
+    padding: 1px 0;
+  }
+  .timing-box {
+    background: #FAFAFA;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+  .timing-box p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.55;
+  }
+  .bottom-section {
+    border-top: 1px solid #E8E8E8;
+    padding-top: 18px;
+    margin-top: 6px;
+  }
+  .bottom-section .offer {
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 14px;
+  }
+  .contact {
+    font-size: 13px;
+    color: #333;
+  }
+  .contact strong {
+    display: block;
+    font-size: 14px;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+  }
+  .contact span {
+    display: block;
+    padding: 1px 0;
+  }
+  .footer {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+    margin-top: 24px;
+    padding-top: 14px;
+    border-top: 1px solid #ECECEC;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="top-line">Prepared by Zac Nowytarger &middot; 0401 102 066</p>
+
+  <h1>How to Update Your Nameservers</h1>
+  <p class="subtitle">A quick guide for jipang-manly.com</p>
+
+  <p class="intro">To get your new website live on your domain, we just need to point your domain to a new hosting system (Cloudflare). This takes about 5 minutes and I'll make sure everything — including your email — keeps working perfectly.</p>
+
+  <div class="email-box">
+    <strong>Will this affect my email?</strong>
+    <p>I'll set up all your email records (MX, SPF, DKIM) on the new system before asking you to make this change. Your email will keep working without interruption. I won't ask you to switch until everything is ready.</p>
+  </div>
+
+  <div class="ns-boxes">
+    <div class="ns-box ns-old">
+      <h3>Current Nameservers</h3>
+      <ul>
+        <li>NS-1325.AWSDNS-37.ORG</li>
+        <li>NS-1939.AWSDNS-50.CO.UK</li>
+        <li>NS-480.AWSDNS-60.COM</li>
+        <li>NS-687.AWSDNS-21.NET</li>
+      </ul>
+    </div>
+    <div class="ns-box ns-new">
+      <h3>New Nameservers</h3>
+      <ul>
+        <li>dave.ns.cloudflare.com</li>
+        <li>shubhi.ns.cloudflare.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="steps-title">Step-by-Step for DreamHost</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-text">Go to <strong>panel.dreamhost.com</strong> and log in to your account</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-text">In the left sidebar, click <strong>"Domains"</strong> then <strong>"Registrations"</strong></div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-text">Click the <strong>"Modify Whois"</strong> link (or the wrench icon) next to <strong>jipang-manly.com</strong></div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">4</div>
+    <div class="step-text">Scroll down to the <strong>"Nameservers"</strong> section</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">5</div>
+    <div class="step-text">Select <strong>"Use another host's nameservers"</strong> (not DreamHost's)</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">6</div>
+    <div class="step-text">Delete all 4 current AWS nameservers</div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">7</div>
+    <div class="step-text">Enter the two new Cloudflare nameservers:
+      <ul>
+        <li>dave.ns.cloudflare.com</li>
+        <li>shubhi.ns.cloudflare.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-num">8</div>
+    <div class="step-text">Click <strong>"Save Nameservers"</strong> to apply the changes</div>
+  </div>
+
+  <div class="timing-box">
+    <p>Changes usually take 1&ndash;24 hours to take effect (often much faster). During this time, your website may show the old or new version intermittently — that's completely normal.</p>
+  </div>
+
+  <div class="bottom-section">
+    <p class="offer">Don't want to do this yourself? No worries at all — just give me your DreamHost login details and I'll handle everything for you.</p>
+    <div class="contact">
+      <strong>Zac Nowytarger</strong>
+      <span>Phone: 0401 102 066</span>
+      <span>Email: zacmanzacmanoz@gmail.com</span>
+    </div>
+  </div>
+
+  <div class="footer">Prepared for Jipang &middot; jipang-manly.com</div>
+
+</div>
+</body>
+</html>
