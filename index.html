@@ -820,9 +820,20 @@ img { max-width: 100%; height: auto; display: block; }
 .hours-table td:first-child { font-weight: 600; color: var(--text); }
 .hours-table td:last-child { text-align: right; color: var(--subtle); }
 .contact-map {
-  border-radius: 12px; overflow: hidden; height: 100%; min-height: 300px;
+  border-radius: 12px; overflow: hidden; height: 100%; min-height: 300px; position: relative;
 }
-.contact-map iframe { width: 100%; height: 100%; border: 0; min-height: 300px; }
+.contact-map a { display: block; position: relative; height: 100%; min-height: 300px; }
+.contact-map iframe { width: 100%; height: 100%; border: 0; min-height: 300px; pointer-events: none; }
+.contact-map-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 16px;
+  background: linear-gradient(transparent, rgba(45,37,32,0.85)); text-align: center;
+}
+.contact-map-overlay span {
+  display: inline-block; background: var(--accent); color: #fff;
+  padding: 10px 24px; border-radius: 8px; font-family: 'DM Serif Display', serif;
+  font-size: 0.95rem; transition: background 0.3s ease;
+}
+.contact-map a:hover .contact-map-overlay span { background: #a8422e; }
 .contact-details-row {
   display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;
 }
@@ -1780,7 +1791,12 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
 
       <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d831.0!2d151.2846!3d-33.7963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ3JzQ2LjciUyAxNTHCsDE3JzA0LjYiRQ!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jipang Manly location on Google Maps"></iframe>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Jipang,+37-39+The+Corso,+Manly+NSW+2095" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Jipang Manly on Google Maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1658.15!2d151.2846!3d-33.7963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ab0f39e3e1f1%3A0x5018c6a67dcefb0!2sJipang!5e0!3m2!1sen!2sau!4v1" style="width:100%;height:100%;min-height:300px;border:0;pointer-events:none;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Jipang Manly location — Shop 9, 37-39 The Corso, Manly NSW 2095"></iframe>
+          <div class="contact-map-overlay">
+            <span>Get Directions on Google Maps</span>
+          </div>
+        </a>
       </div>
     </div>
   </div>
